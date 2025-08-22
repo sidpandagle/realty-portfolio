@@ -1,7 +1,35 @@
 <script lang="ts">
-	
+	import { onMount, onDestroy } from 'svelte';
+
 	let isScrolled = true;
 	let mobileMenuOpen = false;
+
+	let menuRef: HTMLElement | null = null;
+	let buttonRef: HTMLElement | null = null;
+
+	function closeMenu() {
+		mobileMenuOpen = false;
+	}
+
+	function handleDocumentClick(e: MouseEvent) {
+		if (!mobileMenuOpen) return;
+		const target = e.target as Node | null;
+		if (!target) return;
+		// If click is outside the menu and outside the toggle button, close
+		if (menuRef && !menuRef.contains(target) && buttonRef && !buttonRef.contains(target)) {
+			closeMenu();
+		}
+	}
+
+	onMount(() => {
+		if (typeof document === 'undefined') return;
+		document.addEventListener('click', handleDocumentClick);
+	});
+
+	onDestroy(() => {
+		if (typeof document === 'undefined') return;
+		document.removeEventListener('click', handleDocumentClick);
+	});
 </script>
 
 <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 {isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'}">
@@ -33,9 +61,10 @@
 			</div>
 
 			<!-- Mobile menu button -->
-			<button 
-				class="md:hidden {isScrolled ? 'text-slate-800' : 'text-white'}" 
-				onclick={() => mobileMenuOpen = !mobileMenuOpen}
+			<button
+				bind:this={buttonRef}
+				class="md:hidden {isScrolled ? 'text-slate-800' : 'text-white'}"
+				on:click={() => (mobileMenuOpen = !mobileMenuOpen)}
 				aria-label="Toggle mobile menu"
 			>
 				<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -46,14 +75,14 @@
 
 		<!-- Mobile Navigation -->
 		{#if mobileMenuOpen}
-			<div class="md:hidden bg-white border-t">
+			<div class="md:hidden bg-white border-t" bind:this={menuRef}>
 				<div class="px-2 pt-2 pb-3 space-y-1">
-					<a href="#home" class="block px-3 py-2 text-slate-700 hover:bg-gray-100 rounded-md">Home</a>
-					<a href="#about" class="block px-3 py-2 text-slate-700 hover:bg-gray-100 rounded-md">About</a>
-					<a href="#services" class="block px-3 py-2 text-slate-700 hover:bg-gray-100 rounded-md">Services</a>
-					<a href="#projects" class="block px-3 py-2 text-slate-700 hover:bg-gray-100 rounded-md">Projects</a>
-					<a href="#contact" class="block px-3 py-2 text-slate-700 hover:bg-gray-100 rounded-md">Contact</a>
-					<a href="mailto:aorakirealty@gmail.com" class="block mx-3 mt-4 bg-aoraki-red text-white px-4 py-2 rounded-full text-center">
+					<a href="#home" on:click={closeMenu} class="block px-3 py-2 text-slate-700 hover:bg-gray-100 rounded-md">Home</a>
+					<a href="#about" on:click={closeMenu} class="block px-3 py-2 text-slate-700 hover:bg-gray-100 rounded-md">About</a>
+					<a href="#services" on:click={closeMenu} class="block px-3 py-2 text-slate-700 hover:bg-gray-100 rounded-md">Services</a>
+					<a href="#projects" on:click={closeMenu} class="block px-3 py-2 text-slate-700 hover:bg-gray-100 rounded-md">Projects</a>
+					<a href="#contact" on:click={closeMenu} class="block px-3 py-2 text-slate-700 hover:bg-gray-100 rounded-md">Contact</a>
+					<a href="mailto:aorakirealty@gmail.com" on:click={closeMenu} class="block mx-3 mt-4 bg-aoraki-red text-white px-4 py-2 rounded-full text-center">
 						Get Quote
 					</a>
 				</div>
