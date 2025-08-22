@@ -1,0 +1,73 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# SvelteKit / Vite / Build
+.svelte-kit/
+build/
+dist/
+.vite/
+.vite-deps/
+.cache/
+.out/
+
+# Project-specific nested app (Svelte app)
+svelte-app/node_modules/
+svelte-app/.svelte-kit/
+svelte-app/build/
+svelte-app/dist/
+
+# Environment files (do not commit secrets)
+.env
+.env.*
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Misc
+*.pem
+*.key
+*.crt
+*.env
+*.local
+*.tmp
+*.temp
+
+# Deployment / hosting caches
+.vercel/
+.netlify/
+.firebase/
+
+# TypeScript
+*.tsbuildinfo
+
+# Storybook / test caches
+.storybook/
+
+# Optional: ignore package lock if you prefer to keep it out (commented out)
+# package-lock.json
+# yarn.lock
+
+# End of file
