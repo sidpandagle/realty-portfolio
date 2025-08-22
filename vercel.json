@@ -3,10 +3,5 @@
     "env": {
       "NODE_VERSION": "18"
     }
-  },
-  "functions": {
-    "api/**": {
-      "runtime": "nodejs18.x"
-    }
   }
 }
