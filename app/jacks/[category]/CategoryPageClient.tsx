@@ -60,6 +60,15 @@ export default function CategoryPageClient({
     },
   };
 
+  const handleDownloadCatalog = () => {
+    const link = document.createElement('a');
+    link.href = '/applied-tech-20251206.pdf';
+    link.download = 'applied-tech-20251206.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div>
       {/* Breadcrumb & Header */}
@@ -113,13 +122,13 @@ export default function CategoryPageClient({
               <motion.div key={product.id} variants={itemVariants}>
                 <Card hover className="h-full flex flex-col">
                   {/* Product Image */}
-                  <div className="relative mb-4 overflow-hidden rounded-lg group">
+                  <div className="relative mb-4 overflow-hidden rounded-lg group aspect-[292/606]">
                     <Image
                       src={product.image}
                       alt={product.name}
-                      width={600}
-                      height={400}
-                      className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                      width={292}
+                      height={606}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
 
@@ -239,7 +248,7 @@ export default function CategoryPageClient({
             <Button href="/contact" className=' bg-brand-red transition-colors duration-300' variant="primary" size="lg">
               Contact Engineering Team
             </Button>
-            <Button variant="outline" size="lg">
+            <Button variant="outline" size="lg" onClick={handleDownloadCatalog}>
               <Download className="w-4 h-4 mr-2" />
               Download Catalog
             </Button>
