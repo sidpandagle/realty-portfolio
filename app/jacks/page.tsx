@@ -10,67 +10,49 @@ import Link from 'next/link';
 export default function JackSolutions() {
   const categories = [
     {
-      id: 'agriculture',
-      title: 'Agriculture',
-      description: 'Agricultural machines and trailers',
-      icon: Tractor,
-      color: 'from-green-500 to-emerald-600',
-      image: '/images/jacks/agriculture.svg',
-      productCount: 15,
-    },
-    {
-      id: 'car-trailers',
-      title: 'Car-Trailers',
-      description: 'Caravans and car trailers',
-      icon: Truck,
-      color: 'from-blue-500 to-cyan-600',
-      image: '/images/jacks/car-trailers.svg',
-      productCount: 12,
-    },
-    {
-      id: 'heavy-duty',
-      title: 'Heavy-duty',
-      description: 'Trailers and semi-trailers',
-      icon: TruckIcon,
-      color: 'from-red-500 to-orange-600',
-      image: '/images/jacks/heavy-duty.svg',
-      productCount: 18,
-    },
-    {
       id: 'construction',
       title: 'Construction',
       description: 'Machines for building industry',
       icon: HardHat,
       color: 'from-amber-500 to-yellow-600',
-      image: '/images/jacks/construction.svg',
-      productCount: 10,
+      image: '/jacksol_assets/10.jpg',
+      productCount: 3,
     },
     {
-      id: 'maintenance',
-      title: 'Maintenance',
-      description: 'Road maintenance and snow',
+      id: 'trailers',
+      title: 'Trailers',
+      description: 'Tank trailers and semi-trailers',
+      icon: TruckIcon,
+      color: 'from-blue-500 to-cyan-600',
+      image: '/jacksol_assets/14.jpg',
+      productCount: 3,
+    },
+    {
+      id: 'agriculture',
+      title: 'Agriculture',
+      description: 'Agricultural machines and trailers',
+      icon: Tractor,
+      color: 'from-green-500 to-emerald-600',
+      image: '/jacksol_assets/13.jpg',
+      productCount: 2,
+    },
+    {
+      id: 'lightening-compressor',
+      title: 'Lightening & Compressor Trolleys',
+      description: 'Lighting towers and compressor equipment',
       icon: Wrench,
       color: 'from-purple-500 to-pink-600',
-      image: '/images/jacks/maintenance.svg',
-      productCount: 8,
+      image: '/jacksol_assets/15.jpg',
+      productCount: 2,
     },
     {
-      id: 'docking',
-      title: 'Docking',
-      description: 'Aircraft docking systems',
-      icon: Plane,
-      color: 'from-indigo-500 to-blue-600',
-      image: '/images/jacks/docking.svg',
-      productCount: 6,
-    },
-    {
-      id: 'containers',
-      title: 'Containers',
-      description: 'Containers with Iso Corners',
-      icon: Container,
-      color: 'from-teal-500 to-cyan-600',
-      image: '/images/jacks/containers.svg',
-      productCount: 7,
+      id: 'transit-mixer',
+      title: 'Transit Mixer Chute Support',
+      description: 'Concrete mixer truck support systems',
+      icon: Truck,
+      color: 'from-red-500 to-orange-600',
+      image: '/jacksol_assets/16.jpg',
+      productCount: 2,
     },
   ];
 
@@ -134,10 +116,10 @@ export default function JackSolutions() {
               choose the category
             </motion.p>
             <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-white leading-tight">
-              Jacks Solutions
+              LIFTTEK Series Screw Jack
             </h1>
             <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed mb-8">
-              Parking and wheel jacks for every application. Our jacks are chosen by the best international manufacturers for their resistance, reliability, and low maintenance requirements.
+              NABL lab certified and ARAI approved design. Proven reliability in heavy-duty applications since last 18 years. Perfect balance of performance, safety, and cost-effectiveness. Engineered for long service life with minimal downtime.
             </p>
           </motion.div>
         </div>
@@ -198,28 +180,29 @@ export default function JackSolutions() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold mb-4">Why Choose Our Jacks?</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-4">Why Choose Lifttek Screw Jacks?</h2>
             <p className="text-xl text-text-secondary max-w-3xl mx-auto">
-              Industry-leading quality and performance
+              Industry-leading quality and performance with proven reliability
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: 'High Resistance',
-                description: 'Built to withstand demanding conditions and heavy loads',
-                icon: '💪',
+                title: 'Telescopic Design',
+                description: 'Maximum stroke in minimum closed length (0 to 400mm). Compact when retracted, saves valuable space. Ideal for applications with height restrictions. Smooth, precise extension under full load up to 15 kN.',
               },
               {
-                title: 'Low Maintenance',
-                description: 'Designed for longevity with minimal upkeep requirements',
-                icon: '🔧',
+                title: 'High-Efficiency Gearbox',
+                description: 'Integrated high-efficiency reduction gearbox with up to 40% higher mechanical efficiency than worm-only designs. Lower input torque means smaller, cost-effective motors and reduced energy consumption.',
               },
               {
-                title: 'Trusted Worldwide',
-                description: 'Chosen by leading manufacturers across the globe',
-                icon: '🌍',
+                title: 'Easy Maintenance',
+                description: 'Modular construction with quick part replacement. Standard tools only - no special equipment needed. Grease fittings and oil ports easily accessible. Minimal downtime equals maximum productivity.',
+              },
+              {
+                title: 'Rugged & Durable',
+                description: 'Heavy-duty materials for extreme environments. Corrosion-resistant coatings available. High safety factors (typically 4:1 or higher). Withstands shock loads and harsh conditions.',
               },
             ].map((feature, index) => (
               <motion.div
@@ -228,11 +211,10 @@ export default function JackSolutions() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-card-bg p-8 rounded-2xl border border-border hover:border-brand-red transition-all duration-300 text-center"
+                className="bg-card-bg p-6 rounded-2xl border border-border hover:border-brand-red transition-all duration-300"
               >
-                <div className="text-5xl mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-bold mb-3 text-text-primary">{feature.title}</h3>
-                <p className="text-text-secondary">{feature.description}</p>
+                <h3 className="text-lg font-bold mb-3 text-text-primary">{feature.title}</h3>
+                <p className="text-text-secondary text-sm leading-relaxed">{feature.description}</p>
               </motion.div>
             ))}
           </div>

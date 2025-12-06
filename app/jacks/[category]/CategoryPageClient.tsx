@@ -15,14 +15,21 @@ type Product = {
   image: string;
   specifications: string[];
   features: string[];
-  applications: string[];
   has360View?: boolean;
+};
+
+type Application = {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
 };
 
 type CategoryData = {
   title: string;
   description: string;
   products: Product[];
+  applications: Application[];
 };
 
 export default function CategoryPageClient({
@@ -155,9 +162,11 @@ export default function CategoryPageClient({
                       >
                         Request Quote
                       </Button>
+                      {/* 
                       <button className="px-4 py-2 border border-border rounded-lg hover:border-brand-red transition-colors">
                         <Download className="w-4 h-4 text-text-secondary" />
                       </button>
+                       */}
                     </div>
                   </div>
                 </Card>
@@ -167,8 +176,60 @@ export default function CategoryPageClient({
         </div>
       </section>
 
+      {/* Applications Section */}
+      <section className="py-20 bg-bg">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Applications</h2>
+            <p className="text-xl text-text-secondary max-w-3xl mx-auto">
+              Real-world uses of LIFTTEK screw jacks in {category.title.toLowerCase()} industry
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            {category.applications.map((application) => (
+              <motion.div key={application.id} variants={itemVariants}>
+                <Card hover className="h-full">
+                  {/* Application Image */}
+                  <div className="relative mb-4 overflow-hidden rounded-lg group">
+                    <Image
+                      src={application.image}
+                      alt={application.title}
+                      width={600}
+                      height={400}
+                      className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+
+                  {/* Application Info */}
+                  <div>
+                    <h3 className="text-xl font-bold text-text-primary mb-3">
+                      {application.title}
+                    </h3>
+                    <p className="text-text-secondary leading-relaxed">
+                      {application.description}
+                    </p>
+                  </div>
+                </Card>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
       {/* CTA Section */}
-      <section className="bg-bg py-16">
+      <section className="bg-bg-secondary py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Need Technical Specifications?</h2>
           <p className="text-xl text-text-secondary mb-8 max-w-2xl mx-auto">
