@@ -125,7 +125,7 @@ export default function About() {
             </div>
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
               <h3 className="text-lg font-semibold text-accent mb-4">Annual Turnover</h3>
-              <p className="text-xl text-gray-300 font-bold">6-8 Crore</p>
+              <p className="text-xl text-gray-300 font-bold">10 Crore</p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
               <h3 className="text-lg font-semibold text-accent mb-4">Facility Size</h3>

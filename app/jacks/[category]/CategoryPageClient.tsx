@@ -211,13 +211,13 @@ export default function CategoryPageClient({
               <motion.div key={application.id} variants={itemVariants}>
                 <Card hover className="h-full">
                   {/* Application Image */}
-                  <div className="relative mb-4 overflow-hidden rounded-lg group">
+                  <div className="relative mb-4 overflow-hidden rounded-lg group h-64 flex items-center justify-center">
                     <Image
                       src={application.image}
                       alt={application.title}
                       width={600}
                       height={400}
-                      className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
 

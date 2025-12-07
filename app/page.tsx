@@ -70,7 +70,7 @@ export default function Home() {
   ];
 
   const stats = [
-    { value: '6-8 Crore', label: 'Annual Turnover', icon: TrendingUp },
+    { value: '10 Crore', label: 'Annual Turnover', icon: TrendingUp },
     { value: '5,500 Sq.ft', label: 'R.C.C. Construction', icon: Factory },
     { value: '60 HP', label: 'Power Capacity', icon: Zap },
   ];

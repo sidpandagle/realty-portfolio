@@ -22,7 +22,6 @@ export default function Header() {
     { name: 'Services', href: '/services' },
     { name: 'Technologies', href: '/technologies' },
     { name: 'Machines', href: '/machines' },
-    { name: 'Jacks Solutions', href: '/jacks' },
     { name: 'Clients', href: '/clients' },
     { name: 'Contact', href: '/contact' },
   ];
@@ -57,7 +56,31 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-1">
-            {navigation.map((link) => (
+            {navigation.slice(0, 4).map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="relative px-4 py-2 text-sm font-medium text-text-primary hover:text-brand-red transition-all duration-200 rounded-lg hover:bg-card-bg-hover group"
+              >
+                {link.name}
+                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-brand-red group-hover:w-3/4 transition-all duration-300" />
+              </Link>
+            ))}
+            {/* Lifttek Logo for Jack Solutions */}
+            <Link
+              href="/jacks"
+              className="relative px-4 py-2 transition-all duration-200 rounded-lg hover:bg-card-bg-hover group"
+            >
+              <Image
+                src="/images/lifttek-logo.png"
+                alt="Jack Solutions"
+                width={60}
+                height={24}
+                className="object-contain group-hover:scale-105 transition-transform duration-200"
+              />
+              <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-brand-red group-hover:w-3/4 transition-all duration-300" />
+            </Link>
+            {navigation.slice(4).map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
@@ -102,7 +125,31 @@ export default function Header() {
         {mobileMenuOpen && (
           <div className="lg:hidden border-t border-border animate-in slide-in-from-top-2 duration-200">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              {navigation.map((link) => (
+              {navigation.slice(0, 4).map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className="block px-4 py-3 rounded-lg text-base font-medium text-text-primary hover:text-brand-red hover:bg-card-bg-hover transition-all"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              ))}
+              {/* Lifttek Logo for Jack Solutions */}
+              <Link
+                href="/jacks"
+                className="block px-4 py-3 rounded-lg hover:bg-card-bg-hover transition-all"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <Image
+                  src="/images/lifttek-logo.png"
+                  alt="Jack Solutions"
+                  width={80}
+                  height={24}
+                  className="object-contain"
+                />
+              </Link>
+              {navigation.slice(4).map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
