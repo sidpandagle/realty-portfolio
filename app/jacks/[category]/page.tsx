@@ -211,25 +211,25 @@ const categoryData: Record<string, {
         ],
         has360View: true,
       },
-      {
-        id: 'lifttek-tr-3',
-        name: 'LIFTTEK Trailer Jack TR-3',
-        type: 'Trailer Series',
-        description: 'Standard parking jack for medium-duty trailer applications',
-        image: '/jacksol_assets/8.jpg',
-        specifications: [
-          'Load capacity: Up to 15 kN',
-          'Lift height: 400-600mm',
-          'Material: Carbon steel',
-          'Surface: Hot-dip galvanized',
-        ],
-        features: [
-          'Modular construction',
-          'Quick part replacement',
-          'Self-locking mechanism',
-          'All-weather performance',
-        ],
-      },
+      // {
+      //   id: 'lifttek-tr-3',
+      //   name: 'LIFTTEK Trailer Jack TR-3',
+      //   type: 'Trailer Series',
+      //   description: 'Standard parking jack for medium-duty trailer applications',
+      //   image: '/jacksol_assets/8.jpg',
+      //   specifications: [
+      //     'Load capacity: Up to 15 kN',
+      //     'Lift height: 400-600mm',
+      //     'Material: Carbon steel',
+      //     'Surface: Hot-dip galvanized',
+      //   ],
+      //   features: [
+      //     'Modular construction',
+      //     'Quick part replacement',
+      //     'Self-locking mechanism',
+      //     'All-weather performance',
+      //   ],
+      // },
     ],
     applications: [
       {
@@ -295,7 +295,7 @@ const categoryData: Record<string, {
         id: 'jack-hitch',
         title: 'Trailer Hitch Jack Systems',
         description: 'Precision-engineered jacks for trailer tongue and hitch assemblies. Features robust mounting brackets and adjustable height for seamless coupling and uncoupling of towed equipment.',
-        image: '/jacksol_assets/4.jpg',
+        image: '/jacksol_assets/8.jpg',
       },
       {
         id: 'lighting-tower-industrial',
