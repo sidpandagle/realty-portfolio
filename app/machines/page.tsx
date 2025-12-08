@@ -19,7 +19,7 @@ export default function Machines() {
         'Rigid tapping capability'
       ],
       quantity: 1,
-      image: 'https://picsum.photos/seed/machine-vmc-hass/800/600',
+      image: '/VF-4.png',
       category: 'CNC Machining',
     },
     {
@@ -32,7 +32,7 @@ export default function Machines() {
         'Fanuc/Siemens control'
       ],
       quantity: 2,
-      image: 'https://picsum.photos/seed/machine-jyoti/800/600',
+      image: '/mx-12.png',
       category: 'CNC Turning',
     },
     {
@@ -45,7 +45,7 @@ export default function Machines() {
         'Bar feeder compatible'
       ],
       quantity: 1,
-      image: 'https://picsum.photos/seed/machine-huron/800/600',
+      image: '/KX-200-nvu-petit-huron-center.png',
       category: 'CNC Turning',
     },
     {
@@ -58,7 +58,7 @@ export default function Machines() {
         'Excellent for small parts'
       ],
       quantity: 1,
-      image: 'https://picsum.photos/seed/machine-tsugami/800/600',
+      image: '/tsugami cnc.png',
       category: 'Swiss-Type CNC',
     },
     {
@@ -71,7 +71,7 @@ export default function Machines() {
         'High precision grinding'
       ],
       quantity: 4,
-      image: 'https://picsum.photos/seed/machine-dufour/800/600',
+      image: '/universal-milling-machine-removebg-preview.png',
       category: 'Milling',
     },
     {
@@ -84,7 +84,7 @@ export default function Machines() {
         'Essential for jig making'
       ],
       quantity: 1,
-      image: 'https://picsum.photos/seed/machine-jig-boring/800/600',
+      image: '/real jig boring machine.png',
       category: 'Precision Tools',
     },
     {
@@ -97,7 +97,7 @@ export default function Machines() {
         'Variable speed drive'
       ],
       quantity: 2,
-      image: 'https://picsum.photos/seed/machine-norton/800/600',
+      image: '/electric-double-chuck-lathe-machine-cast-iron-1500-mm-220-volts-1200-rpm-803275851-vaetqefe.png',
       category: 'Conventional Machines',
     },
     {
@@ -110,7 +110,7 @@ export default function Machines() {
         'Tilting table available'
       ],
       quantity: 1,
-      image: 'https://picsum.photos/seed/machine-radial-drill/800/600',
+      image: '/png-transparent-milling-machine-augers-milling-machine-drilling-others-steel-chuck-augers-thumbnail.png',
       category: 'Drilling',
     },
     {
@@ -123,7 +123,7 @@ export default function Machines() {
         'Safety features included'
       ],
       quantity: 1,
-      image: 'https://picsum.photos/seed/machine-press/800/600',
+      image: '/png-clipart-machine-hydraulic-press-hydraulics-cuatro-postes-industry-others-miscellaneous-angle.png',
       category: 'Forming',
     },
     {
@@ -136,7 +136,7 @@ export default function Machines() {
         'Multiple metal compatibility'
       ],
       quantity: 2,
-      image: 'https://picsum.photos/seed/machine-mig-welder/800/600',
+      image: '/png-transparent-gas-tungsten-arc-welding-machine-welder-gas-metal-arc-welding-demolition-welding-chip-welding-machine-electronics-industrial-material.png',
       category: 'Welding',
     },
     {
@@ -149,7 +149,7 @@ export default function Machines() {
         'Coolant system'
       ],
       quantity: 2,
-      image: 'https://picsum.photos/seed/machine-bandsaw/800/600',
+      image: '/png-clipart-band-saws-machine-bandsaw-box-cutting-fence-angle-fence-thumbnail.png',
       category: 'Cutting',
     },
     {
@@ -162,7 +162,7 @@ export default function Machines() {
         'Energy efficient'
       ],
       quantity: 1,
-      image: 'https://picsum.photos/seed/machine-compressor/800/600',
+      image: '/HQ108.png',
       category: 'Support Equipment',
     },
   ];
