@@ -1,0 +1,12 @@
+# Robots.txt for Applied Technologies
+# https://www.appliedtek.co.in
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.appliedtek.co.in/sitemap.xml
+
+# Block admin and private areas (if any)
+Disallow: /api/
+Disallow: /_next/

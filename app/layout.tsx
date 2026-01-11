@@ -7,8 +7,8 @@ import ScrollToTop from "@/components/ScrollToTop";
 
 export const metadata: Metadata = {
   title: "Applied Technologies - Precision Engineering & Manufacturing Solutions",
-  description: "Applied Technologies provides Engineering Manufacturing & Design services for Defense, Automotive, Construction Equipment manufacturers. ISO certified precision machining, CNC services in Pune.",
-  keywords: "precision engineering, CNC machining, manufacturing solutions, construction equipment, aerospace parts, Pune, India, ISO certified",
+  description: "Applied Technologies provides Engineering Manufacturing & Design services for Defense, Automotive, Construction Equipment manufacturers. ISO certified precision machining, CNC services, LIFTTEK screw jacks, trailer jacks, lighting tower jacks in Pune.",
+  keywords: "screw jacks, trailer jacks, lighting tower screw jacks, towing jacks, parking jacks, telescopic jacks, mechanical jacks, LIFTTEK jacks, lift systems, heavy duty jacks, hydraulic jacks, leveling jacks, stabilizer jacks, trailer landing gear, jack stands, lifting equipment, construction jacks, agricultural trailer jacks, compressor trolley jacks, transit mixer support, NABL certified jacks, ARAI approved jacks, precision engineering, CNC machining, manufacturing solutions, construction equipment, aerospace parts, Pune, India, ISO certified",
   authors: [{ name: "Applied Technologies" }],
   icons: {
     icon: [
@@ -22,14 +22,14 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Applied Technologies - Precision Engineering & Manufacturing",
-    description: "Supporting manufacturing companies in engineering to help create Innovative Products, Reduce Costs, and Shorten Development Cycles.",
+    description: "Supporting manufacturing companies in engineering to help create Innovative Products, Reduce Costs, and Shorten Development Cycles. Manufacturer of LIFTTEK screw jacks, trailer jacks, lighting tower jacks, and lifting equipment.",
     url: "https://www.appliedtek.co.in",
     siteName: "Applied Technologies",
     images: [
       {
-        url: '/images/logo.png',
-        width: 198,
-        height: 103,
+        url: 'https://www.appliedtek.co.in/logo-square.png',
+        width: 512,
+        height: 512,
         alt: 'Applied Technologies Logo',
       },
     ],
